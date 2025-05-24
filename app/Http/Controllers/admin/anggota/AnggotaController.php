@@ -40,6 +40,7 @@ class AnggotaController extends Controller
             'pindahkeluar' => 'Pindah Keluar',
             'pindahmasuk' => 'Pindah Masuk',
             'alumni' => 'Alumni',
+            'aktif' => 'Aktif',
         ];
         
         $descriptionMap = [
@@ -48,6 +49,7 @@ class AnggotaController extends Controller
             'pindahkeluar' => 'Menampilkan data anggota yang telah pindah keluar.',
             'pindahmasuk' => 'Menampilkan data anggota yang pindah masuk.',
             'alumni' => 'Menampilkan data anggota yang sudah menjadi alumni.',
+            'aktif' => 'Menampilkan data anggota yang aktif.',
         ];
         
         $segment = request()->segment(3);
@@ -60,8 +62,11 @@ class AnggotaController extends Controller
         if (isset($statusMap[$segment])) {
             $pageTitle = 'Anggota ' . $statusMap[$segment];
             $pageDescription = $descriptionMap[$segment] ?? $pageDescription;
-            
-            $query->where('status', $statusMap[$segment]);
+            if($statusMap[$segment] == 'Aktif') {
+                $query->where('is_active', 1);
+            } else {
+                $query->where('status', $statusMap[$segment]);
+            }
         }
         
 
@@ -141,6 +146,7 @@ class AnggotaController extends Controller
             'no_hp'               => $request->no_hp,
             'email'               => $request->email,
             'nim'                 => $request->nim,
+            'is_active'           => $request->is_active ?? '1',
             'status'              => $request->status ?? 'Draft',
             'alumni'              => $request->alumni,
             'keterangan'          => $request->keterangan,
@@ -254,10 +260,12 @@ class AnggotaController extends Controller
             'no_hp'               => $request->no_hp,
             'email'               => $request->email,
             'nim'                 => $request->nim,
+            'is_active'           => $request->is_active ?? '1',
             'status'              => $request->status,
             'alumni'              => $request->alumni,
             'keterangan'          => $request->keterangan,
         ];
+
 
         // Cek dan simpan file jika diupload
         if ($request->hasFile('kpm')) {

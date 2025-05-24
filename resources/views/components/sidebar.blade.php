@@ -143,15 +143,21 @@
                 </a>
               </li>
 
-              <li @if(Request::segment(3) == 'draft') class="active" @endif>
-                <a href="{{ auth()->user()->hasRole('admin') ? route('admin.anggota.draft') : route('pimpinan.anggota.draft') }}">
-                  <span class="sub-item">Draft</span>
+              <li @if(Request::segment(3) == 'aktif') class="active" @endif>
+                <a href="{{ auth()->user()->hasRole('admin') ? route('admin.anggota.aktif') : route('pimpinan.anggota.aktif') }}">
+                  <span class="sub-item">Aktif</span>
                 </a>
               </li>
 
               <li @if(Request::segment(3) == 'alumni') class="active" @endif>
                 <a href="{{ auth()->user()->hasRole('admin') ? route('admin.anggota.alumni') : route('pimpinan.anggota.alumni') }}">
                   <span class="sub-item">Alumni</span>
+                </a>
+              </li>
+
+              <li @if(Request::segment(3) == 'draft') class="active" @endif>
+                <a href="{{ auth()->user()->hasRole('admin') ? route('admin.anggota.draft') : route('pimpinan.anggota.draft') }}">
+                  <span class="sub-item">Draft</span>
                 </a>
               </li>
 

@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('nim')->unique()->nullable();
             $table->string('ktp')->nullable();
             $table->string('foto')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->enum('status', ['Baru', 'Pindah Masuk', 'Pindah Keluar', 'Alumni', 'Draft'])->default('Draft');
             $table->integer('alumni')->nullable();
             $table->text('keterangan')->nullable();

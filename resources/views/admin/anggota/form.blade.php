@@ -228,6 +228,14 @@
                                         <input type="file" class="form-control" id="foto" name="foto">
                                     </div>
 
+                                    <div class="form-group">
+                                        <label for="is_active">Aktif/Tidak Aktif</label>
+                                        <select class="form-select" id="is_active" name="is_active">
+                                            <option value="1" {{ old('is_active', $data->is_active ?? 1) == 1 ? 'selected' : '' }}>Aktif</option>
+                                            <option value="0" {{ old('is_active', $data->is_active ?? 1) == 0 ? 'selected' : '' }}>Tidak Aktif</option>
+                                        </select>
+                                    </div>
+
                                     
 
 

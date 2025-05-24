@@ -44,6 +44,13 @@ Route::prefix('anggota')->group(function () {
             Route::get('/', 'index')->name('admin.anggota.alumni');
 
         });
+
+        // filter status=Alumni
+        Route::prefix('aktif')->group(function () {
+
+            Route::get('/', 'index')->name('admin.anggota.aktif');
+
+        });
             
         // menampilkan formulir tambah anggota baru
         Route::get('/create', 'create')->name('admin.anggota.create');

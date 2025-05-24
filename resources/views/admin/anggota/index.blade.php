@@ -48,6 +48,7 @@
                                                     <th>Alamat Tinggal</th>
                                                     <th>Nomor HP</th>
                                                     <th>Email</th>
+                                                    <th>Aktif</th>
                                                     <th>Status</th>
                                                     @if(Request::segment(3) == '' || Request::segment(3) == 'alumni')
                                                     <th>Alumni</th>
@@ -90,6 +91,7 @@
                                                     <td>{!! $item->alamat_tinggal !!}</td>
                                                     <td>{!! $item->no_hp !!}</td>
                                                     <td>{!! $item->email !!}</td>
+                                                    <td>{!! $item->is_active ? 'Aktif' : 'Tidak Aktif' !!}</td>
                                                     <td>{!! $item->status !!}</td>
                                                     
                                                     @if(Request::segment(3) == '' || Request::segment(3) == 'alumni' )
