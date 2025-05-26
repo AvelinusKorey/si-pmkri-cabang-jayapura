@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="assets/css/demo.css" />
 </head>
 
-<body>
+<body style="background: url('{{ asset('assets/img/bg-1.avif') }}') no-repeat center center; background-size: cover;">
 
 
   <div class="wrapper pt-5">
