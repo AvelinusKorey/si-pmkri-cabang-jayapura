@@ -31,7 +31,7 @@
                     <!-- .row end -->
 
                     <div class="row">
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card bg-success">
                                 <div class="card-body text-center">
                                     <span class="d-block text-light text-uppercase">Semua Anggota</span>
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Anggota Baru</span>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Pindah Masuk</span>
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Pindah Keluar</span>
@@ -71,7 +71,17 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <span class="d-block text-muted text-uppercase">Aktif</span>
+                                    <div class="display-3 text-primary">{{ $anggotaAktif ?? '' }}</div>
+                                    <a href="{{ route('admin.anggota.aktif') }}"><i class="fas fa-arrow-right"></i> Tampilkan</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .col end -->
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Alumni</span>
@@ -81,7 +91,7 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Draft</span>
@@ -95,7 +105,7 @@
                     <!-- .row end -->
 
                     <div class="row">
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Kampus</span>
@@ -105,7 +115,7 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Fakultas</span>
@@ -115,7 +125,7 @@
                             </div>
                         </div>
                         <!-- .col end -->
-                        <div class="col-lg-2">
+                        <div class="col-lg-3">
                             <div class="card">
                                 <div class="card-body text-center">
                                     <span class="d-block text-muted text-uppercase">Program Studi</span>

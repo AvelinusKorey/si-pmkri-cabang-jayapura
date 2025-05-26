@@ -28,6 +28,7 @@ class DasborController extends Controller
         $anggotaPindahKeluar = Anggota::where('status', 'Pindah Keluar')->count();
         $anggotaAlumni = Anggota::where('status', 'Alumni')->count();
         $anggotaDraft = Anggota::where('status', 'Draft')->count();
+        $anggotaAktif = Anggota::where('is_active', 1)->count();
 
         $totalKampus = Kampus::count();
         $totalFakultas = Fakultas::count();
@@ -46,6 +47,7 @@ class DasborController extends Controller
             'anggotaBaru',
             'anggotaPindahMasuk',
             'anggotaPindahKeluar',
+            'anggotaAktif',
             'anggotaAlumni',
             'anggotaDraft',
             'totalKampus',
