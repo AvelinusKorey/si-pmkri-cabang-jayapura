@@ -44,6 +44,13 @@ Route::prefix('anggota')->group(function () {
             Route::get('/', 'index')->name('pimpinan.anggota.alumni');
 
         });
+
+        // filter status=Alumni
+        Route::prefix('aktif')->group(function () {
+
+            Route::get('/', 'index')->name('pimpinan.anggota.aktif');
+
+        });
             
         // show
         Route::get('/{id}/detail', 'show')->name('pimpinan.anggota.show');
